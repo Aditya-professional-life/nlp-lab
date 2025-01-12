@@ -21,3 +21,42 @@ pos_tags = nltk.pos_tag(filter_words)
 print("Tokens:", tokens)
 print("Filtered Words:", filter_words)
 print("POS Tags:", pos_tags)
+
+
+# TF-IDF Example with Scikit-learn
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+docs = [
+    "Natural Language processing is amazing.",
+    "Machine learning and NLP go hand in hand.",
+    "TF-IDF helps find important words in a document."
+]
+
+vec = TfidfVectorizer()
+
+tfidf_mat = vec.fit_transform(docs)
+
+print(vec.get_feature_names_out())
+print(tfidf_mat.toarray())
+
+
+
+# TF-IDF Example with Scikit-learn
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+docs = [
+    "Natural Language processing is amazing.",
+    "Machine learning and NLP go hand in hand.",
+    "TF-IDF helps find important words in a document."
+]
+
+vec = TfidfVectorizer()
+
+tfidf_mat = vec.fit_transform(docs)
+
+print(vec.get_feature_names_out())
+print(tfidf_mat.toarray())
