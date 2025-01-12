@@ -38,3 +38,36 @@ pos_tags = nltk.pos_tag(filter_words)
 print("Original Tokens:", tokens)
 print("Filtered Tokens (without stop words):", filter_words)
 print("POS Tags:", pos_tags)
+
+
+
+# NLP Examples with TF-IDF
+
+This section demonstrates how to compute the Term Frequency-Inverse Document Frequency (TF-IDF) for a set of documents using the `TfidfVectorizer` from `sklearn`.
+
+---
+
+## Code 2: TF-IDF with Scikit-Learn
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# Sample documents
+docs = [
+    "Natural Language processing is amazing.",
+    "Machine learning and NLP go hand in hand.",
+    "TF-IDF helps find important words in a document."
+]
+
+# Initialize the TfidfVectorizer
+vec = TfidfVectorizer()
+
+# Fit and transform the documents into a TF-IDF matrix
+tfidf_mat = vec.fit_transform(docs)
+
+# Display the feature names (words)
+print(vec.get_feature_names_out())
+
+# Display the TF-IDF matrix as an array
+print(tfidf_mat.toarray())
+
